@@ -1,20 +1,77 @@
 /* Additional header style */
 header {
-    background-color: rgba(152, 152, 152, 0.7);
+    background-color: rgb(240, 193, 225);
     text-align: center;
-    padding: 0px 0;
+    padding: 0px;
     font-family: Arial, sans-serif;
     margin-top: 35px;
+}
+/* สไตล์ของข้อมูลแต่ละบรรทัด */
+header li {
+    margin: 5px 0; /* ปรับค่า margin ตามที่คุณต้องการ */
+    font-size: 16px; /* ปรับขนาดฟอนต์ตามที่คุณต้องการ */
+    list-style: none; /* ไม่แสดงเครื่องหมายลำดับ */
+}
+
+/* สไตล์ของชื่อเรื่องหลัก */
+header h1 {
+    font-size: 40px; /* ปรับขนาดฟอนต์ของชื่อหลักตามที่คุณต้องการ */
+    margin: 0; /* ลบ margin เพื่อไม่ให้มีพื้นที่ว่างด้านบนของชื่อหลัก */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ลิงก์อีเมล */
+header a {
+    text-decoration: none; /* ไม่ให้มี underline ในลิงก์ */
+    color: #333; /* สีข้อความลิงก์ตามที่คุณต้องการ */
+    font-weight: bold; /* ทำให้ตัวหนังสือลิงก์มีหนาขึ้น */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul.menu {
+    list-style: none;
+    padding: 10px 0;
+    background-color: rgb(0, 0, 0);
+}
+
+nav ul.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+}
+nav ul.menu li:first-child {
+    margin-right: 20px; /* ระยะห่างของปุ่ม "Back" จากขอบขวา */
+}
+
+nav ul.menu li:first-child a {
+    background-color: #333; /* สีพื้นหลังของปุ่ม "Back" */
+    color: white; /* สีข้อความ */
+    padding: 10px 20px; /* ขนาดและระยะห่างของปุ่ม "Back" */
+    text-decoration: none; /* ไม่เพิ่มขีดเส้นใต้ข้อความ */
+    border-radius: 5px; /* ทำมุมของปุ่มเป็นวงกลม */
+    font-weight: bold;
+}
+.menu a:hover {
+    background-color: #333; /* ปรับสีพื้นหลังตามที่คุณต้องการ */
+    color: #fff !important; /* ปรับสีข้อความเป็นขาวหรือสีอื่นตามที่คุณต้องการ */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* เพิ่มเอฟเฟกต์การเปลี่ยนสีพื้นหลัง, ข้อความ และขนาดเมื่อชี้ */
 }
 /* Resetting default margin and padding */
 body, h1, p, ul, li {
     margin: 0;
     padding: 0;
-}
-
-/* Common button styles */
-button {
-    border: none;
 }
 
 button img {
@@ -29,15 +86,7 @@ button img {
 .borderless-button h1 {
     font-size: 20px;
     color: black;
-    text-shadow: 2px 2px 0px white;
-    border: 2px solid white;
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Background color for certain elements */
-b2 {
-    background-color: rgb(192, 192, 191);
 }
 
 /* Image zoom on hover */
@@ -62,24 +111,31 @@ b2 {
 
 /* Different button colors based on class */
 .borderless-button.homepage {
-    background-color: green;
+    background-color: rgb(185, 199, 252);
 }
 
 .borderless-button.advisor {
-    background-color: yellow;
+    background-color: rgb(216, 252, 213);
 }
 
 .borderless-button.activities {
-    background-color: red;
+    background-color: rgb(255, 197, 197);
 }
 
 .borderless-button.more {
-    background-color: blue;
+    background-color: rgb(217, 241, 252);
+}
+
+.circle-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* ทำให้รูปเป็นวงกลม */
+    display: block; /* ทำให้รูปอยู่กลางส่วนกลางของหน้าจอ */
+    margin: 0 auto; /* จัดตำแหน่งให้รูปอยู่กลางแนวนอน */
 }
 
 /* Main background and container styles */
 body {
-    background-image: url('../image/4124-View1.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -90,7 +146,7 @@ body {
     display: flex;
     flex-direction: column;
     /* Reduced background opacity */
-    background-color: rgba(255, 255, 255, 0.7); /* You can adjust the opacity by changing the last value */
+    background-color: rgb(254, 236, 249); /* You can adjust the opacity by changing the last value */
 }
 
 /* Main content container styles */
@@ -115,17 +171,6 @@ main {
 b {
     font-size: 30px;
     font-style: oblique;
-}
-
-b1 {
-    font-size: 22px;
-    background-color: rgb(192, 192, 191);
-}
-
-h1 {
-    font-size: 40px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* More background styles */
@@ -194,41 +239,15 @@ summary {
     background-color: red;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: /* สีพื้นหลังที่คุณต้องการ */;
-    /* แนวนอนจัดข้อความในเมนูตามต้องการ */
-    /* อาจจะเพิ่ม padding, margin, font-size, หรือคุณสมบัติอื่น ๆ ตามต้องการ */
+/* Style for the list items */
+li {
+    list-style-type: none; /* Remove the default list bullet */
+    margin-bottom: 10px; /* Add some space between list items */
+    font-size: 16px; /* Adjust the font size */
 }
 
-nav ul.menu {
-    list-style: none;
-    padding: 10px 0;
-    background-color: rgb(0, 0, 0);
-}
-
-nav ul.menu li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul.menu li a {
+a {
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    background-color: rgb(0, 0, 0);
-}
-nav ul.menu li:first-child {
-    margin-right: 20px; /* ระยะห่างของปุ่ม "Back" จากขอบขวา */
 }
 
-nav ul.menu li:first-child a {
-    background-color: #333; /* สีพื้นหลังของปุ่ม "Back" */
-    color: white; /* สีข้อความ */
-    padding: 10px 20px; /* ขนาดและระยะห่างของปุ่ม "Back" */
-    text-decoration: none; /* ไม่เพิ่มขีดเส้นใต้ข้อความ */
-    border-radius: 5px; /* ทำมุมของปุ่มเป็นวงกลม */
-    font-weight: bold;
-}
