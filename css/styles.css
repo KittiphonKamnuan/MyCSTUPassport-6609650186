@@ -1,0 +1,234 @@
+/* Additional header style */
+header {
+    background-color: rgba(152, 152, 152, 0.7);
+    text-align: center;
+    padding: 0px 0;
+    font-family: Arial, sans-serif;
+    margin-top: 35px;
+}
+/* Resetting default margin and padding */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Common button styles */
+button {
+    border: none;
+}
+
+button img {
+    background-color: #fff;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Button with text overlay styles */
+.borderless-button h1 {
+    font-size: 20px;
+    color: black;
+    text-shadow: 2px 2px 0px white;
+    border: 2px solid white;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Background color for certain elements */
+b2 {
+    background-color: rgb(192, 192, 191);
+}
+
+/* Image zoom on hover */
+.zoomable-image {
+    transition: transform 0.3s;
+}
+
+.zoomable-image:hover {
+    transform: scale(1.1);
+}
+
+/* Button container styles */
+.borderless-button {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+/* Different button colors based on class */
+.borderless-button.homepage {
+    background-color: green;
+}
+
+.borderless-button.advisor {
+    background-color: yellow;
+}
+
+.borderless-button.activities {
+    background-color: red;
+}
+
+.borderless-button.more {
+    background-color: blue;
+}
+
+/* Main background and container styles */
+body {
+    background-image: url('../image/4124-View1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 10px 20px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Reduced background opacity */
+    background-color: rgba(255, 255, 255, 0.7); /* You can adjust the opacity by changing the last value */
+}
+
+/* Main content container styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* Grid container styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Custom text styles */
+b {
+    font-size: 30px;
+    font-style: oblique;
+}
+
+b1 {
+    font-size: 22px;
+    background-color: rgb(192, 192, 191);
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* More background styles */
+#para img {
+    border: 5px solid rgb(255, 255, 255);
+    padding: 1px;
+}
+
+#para1 {
+    background-color: rgb(68, 117, 214);
+}
+
+#para2 {
+    background-color: rgb(214, 68, 192);
+}
+
+#para3 {
+    background-color: rgb(190, 214, 68);
+}
+
+#para4 {
+    background-color: rgb(68, 214, 209);
+}
+
+/* Additional styles */
+summary {
+    font-size: 20px;
+}
+
+/* Further customization */
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+    background: url('../image/4124-View1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.info-left, .info-right {
+    flex: 1;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+.info-left h3, .info-right h3 {
+    font-size: 24px;
+}
+
+.info-left p, .info-right p {
+    font-size: 24px;
+}
+
+#para1 {
+    background-color: rgba(68, 117, 214, 0.7);
+}
+
+#para2, #para4 , #para6 {
+    background-color: yellow;
+}
+
+#para3 , #para5{
+    background-color: red;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: /* สีพื้นหลังที่คุณต้องการ */;
+    /* แนวนอนจัดข้อความในเมนูตามต้องการ */
+    /* อาจจะเพิ่ม padding, margin, font-size, หรือคุณสมบัติอื่น ๆ ตามต้องการ */
+}
+
+nav ul.menu {
+    list-style: none;
+    padding: 10px 0;
+    background-color: rgb(0, 0, 0);
+}
+
+nav ul.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+}
+nav ul.menu li:first-child {
+    margin-right: 20px; /* ระยะห่างของปุ่ม "Back" จากขอบขวา */
+}
+
+nav ul.menu li:first-child a {
+    background-color: #333; /* สีพื้นหลังของปุ่ม "Back" */
+    color: white; /* สีข้อความ */
+    padding: 10px 20px; /* ขนาดและระยะห่างของปุ่ม "Back" */
+    text-decoration: none; /* ไม่เพิ่มขีดเส้นใต้ข้อความ */
+    border-radius: 5px; /* ทำมุมของปุ่มเป็นวงกลม */
+    font-weight: bold;
+}
