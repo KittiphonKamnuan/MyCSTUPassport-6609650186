@@ -126,12 +126,25 @@ button img {
     background-color: rgb(217, 241, 252);
 }
 
-.circle-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; /* ทำให้รูปเป็นวงกลม */
-    display: block; /* ทำให้รูปอยู่กลางส่วนกลางของหน้าจอ */
-    margin: 0 auto; /* จัดตำแหน่งให้รูปอยู่กลางแนวนอน */
+.image-container {
+    display: flex;
+    align-items: center; /* จัดให้รูปอยู่ตรงกลางแนวตั้ง */
+    justify-content: center; /* จัดให้รูปอยู่ตรงกลางแนวนอน */
+    height: 400px; /* กำหนดความสูงของ container เท่ากับความสูงของรูปภาพ */
+}
+
+.square-image {
+    max-width: 100%; /* ความกว้างของรูปภาพจะไม่เกินขอบเขตของ container */
+    max-height: 100%; /* ความสูงของรูปภาพจะไม่เกินขอบเขตของ container */
+    object-fit: cover;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.square-image:hover {
+    transform: translateX(-20px); /* เลื่อนรูปภาพไปทางซ้ายเมื่อเม้าส์ hover */
 }
 
 /* Main background and container styles */
