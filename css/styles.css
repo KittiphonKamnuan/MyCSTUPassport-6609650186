@@ -1,33 +1,42 @@
-/* Additional header style */
 header {
     background-color: rgb(240, 193, 225);
     text-align: center;
     padding: 0px;
     font-family: Arial, sans-serif;
-    margin-top: 35px;
-}
-/* สไตล์ของข้อมูลแต่ละบรรทัด */
-header li {
-    margin: 5px 0; /* ปรับค่า margin ตามที่คุณต้องการ */
-    font-size: 16px; /* ปรับขนาดฟอนต์ตามที่คุณต้องการ */
-    list-style: none; /* ไม่แสดงเครื่องหมายลำดับ */
+    margin-top: 10px;
 }
 
-/* สไตล์ของชื่อเรื่องหลัก */
+header li {
+    margin: 5px 0; 
+    font-size: 16px;
+    list-style: none; 
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
 header h1 {
-    font-size: 40px; /* ปรับขนาดฟอนต์ของชื่อหลักตามที่คุณต้องการ */
-    margin: 0; /* ลบ margin เพื่อไม่ให้มีพื้นที่ว่างด้านบนของชื่อหลัก */
+    font-size: 40px;
+    margin: 0;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slide 3s infinite alternate;
 }
 
-/* ลิงก์อีเมล */
 header a {
-    text-decoration: none; /* ไม่ให้มี underline ในลิงก์ */
-    color: #333; /* สีข้อความลิงก์ตามที่คุณต้องการ */
-    font-weight: bold; /* ทำให้ตัวหนังสือลิงก์มีหนาขึ้น */
+    text-decoration: none; 
+    color: #333; 
+    font-weight: bold; 
 }
 
+/* 
 nav {
     position: fixed;
     top: 0;
@@ -51,24 +60,30 @@ nav ul.menu li a {
     font-weight: bold;
     background-color: rgb(0, 0, 0);
 }
+
 nav ul.menu li:first-child {
-    margin-right: 20px; /* ระยะห่างของปุ่ม "Back" จากขอบขวา */
+    margin-right: 20px; 
 }
 
 nav ul.menu li:first-child a {
-    background-color: #333; /* สีพื้นหลังของปุ่ม "Back" */
-    color: white; /* สีข้อความ */
-    padding: 10px 20px; /* ขนาดและระยะห่างของปุ่ม "Back" */
-    text-decoration: none; /* ไม่เพิ่มขีดเส้นใต้ข้อความ */
-    border-radius: 5px; /* ทำมุมของปุ่มเป็นวงกลม */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none; 
+    border-radius: 5px;
     font-weight: bold;
 }
-.menu a:hover {
-    background-color: #333; /* ปรับสีพื้นหลังตามที่คุณต้องการ */
-    color: #fff !important; /* ปรับสีข้อความเป็นขาวหรือสีอื่นตามที่คุณต้องการ */
-    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* เพิ่มเอฟเฟกต์การเปลี่ยนสีพื้นหลัง, ข้อความ และขนาดเมื่อชี้ */
+*/
+tr {
+    font-size: 16px;
 }
-/* Resetting default margin and padding */
+
+.menu a:hover {
+    background-color: #333; 
+    color: #fff !important;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+}
+
 body, h1, p, ul, li {
     margin: 0;
     padding: 0;
@@ -82,60 +97,9 @@ button img {
     object-fit: cover;
 }
 
-/* Button with text overlay styles */
-.borderless-button h1 {
-    font-size: 20px;
-    color: black;
-    padding: 5px 10px;
-}
-
-/* Image zoom on hover */
-.zoomable-image {
-    transition: transform 0.3s;
-}
-
-.zoomable-image:hover {
-    transform: scale(1.1);
-}
-
-/* Button container styles */
-.borderless-button {
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-}
-
-/* Different button colors based on class */
-.borderless-button.homepage {
-    background-color: rgb(185, 199, 252);
-}
-
-.borderless-button.advisor {
-    background-color: rgb(216, 252, 213);
-}
-
-.borderless-button.activities {
-    background-color: rgb(255, 197, 197);
-}
-
-.borderless-button.more {
-    background-color: rgb(217, 241, 252);
-}
-
-.image-container {
-    display: flex;
-    align-items: center; /* จัดให้รูปอยู่ตรงกลางแนวตั้ง */
-    justify-content: center; /* จัดให้รูปอยู่ตรงกลางแนวนอน */
-    height: 400px; /* กำหนดความสูงของ container เท่ากับความสูงของรูปภาพ */
-}
-
 .square-image {
-    max-width: 100%; /* ความกว้างของรูปภาพจะไม่เกินขอบเขตของ container */
-    max-height: 100%; /* ความสูงของรูปภาพจะไม่เกินขอบเขตของ container */
+    max-width: 30%; 
+    max-height: 30%; 
     object-fit: cover;
     border: 1px solid #ddd;
     margin-right: 10px;
@@ -144,10 +108,9 @@ button img {
 }
 
 .square-image:hover {
-    transform: translateX(-20px); /* เลื่อนรูปภาพไปทางซ้ายเมื่อเม้าส์ hover */
+    transform: translateX(-20px); 
 }
-
-/* Main background and container styles */
+/*
 body {
     background-attachment: fixed;
     background-size: cover;
@@ -158,11 +121,9 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Reduced background opacity */
-    background-color: rgb(254, 236, 249); /* You can adjust the opacity by changing the last value */
+    background-color: rgb(254, 236, 249); 
 }
-
-/* Main content container styles */
+*/
 main {
     display: flex;
     flex-direction: column;
@@ -171,49 +132,22 @@ main {
     flex-grow: 1;
 }
 
-/* Grid container styles */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Custom text styles */
 b {
     font-size: 30px;
     font-style: oblique;
 }
 
-/* More background styles */
-#para img {
-    border: 5px solid rgb(255, 255, 255);
-    padding: 1px;
-}
-
-#para1 {
-    background-color: rgb(68, 117, 214);
-}
-
-#para2 {
-    background-color: rgb(214, 68, 192);
-}
-
-#para3 {
-    background-color: rgb(190, 214, 68);
-}
-
-#para4 {
-    background-color: rgb(68, 214, 209);
-}
-
-/* Additional styles */
 summary {
     font-size: 20px;
 }
 
-/* Further customization */
+.image-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 400px; 
+}
+
 .info-container {
     display: flex;
     flex-direction: row;
@@ -221,42 +155,26 @@ summary {
     align-items: center;
     margin-top: 20px;
     padding: 0 20px;
-    background: url('../image/4124-View1.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #b1b1b1;
+    border-radius: 10px; /* กำหนดขอบกลมด้วยค่าพิกเซล */
 }
 
-.info-left, .info-right {
-    flex: 1;
-    text-align: center;
-    background-color: aliceblue;
-    padding: 20px;
-}
-
-.info-left h3, .info-right h3 {
-    font-size: 24px;
-}
-
-.info-left p, .info-right p {
-    font-size: 24px;
-}
 
 #para1 {
-    background-color: rgba(68, 117, 214, 0.7);
+    background-color: rgba(138, 165, 219, 0.7);
 }
 
 #para2, #para4 , #para6 {
-    background-color: yellow;
+    background-color: rgb(247, 247, 143);
 }
 
 #para3 , #para5{
-    background-color: red;
+    background-color: rgb(239, 156, 156);
 }
 
-/* Style for the list items */
 li {
-    list-style-type: none; /* Remove the default list bullet */
-    margin-bottom: 10px; /* Add some space between list items */
-    font-size: 16px; /* Adjust the font size */
+    list-style-type: none;
+    font-size: 16px; 
 }
 
 a {
@@ -264,3 +182,152 @@ a {
     text-decoration: none;
 }
 
+/*
+.box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 10px;
+    align-content: stretch; 
+    justify-content: stretch; 
+}
+
+.box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+*/
+
+.small-image {
+    width: 180px; /* ปรับความกว้างตามที่คุณต้องการ */
+    height: auto; /* รักษาส่วนกว้างตัวเล่นข้อมูลสัดส่วน */
+}
+
+/* กำหนดความกว้างของแต่ละภาพ */
+.split-image-container {
+    width: 50%;
+    display: inline-block;
+    overflow: hidden; /* ซ่อนส่วนเกินของรูปภาพ */
+}
+
+.split-image {
+    width: 30%; /* ครอบรูปภาพให้เต็มพื้นที่ */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+/*ทำ2*2*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center; /* Horizontally center the grid items */
+    align-items: center; /* Vertically center the grid items */
+    text-align: center; /* Center the text inside grid items */
+    height: 100%; /* Ensure the grid container takes up the full height of its parent */
+}
+
+.grid-button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.grid-button:hover {
+    transform: scale(1.1);
+}
+
+.grid-button.homepage {
+    background-color: rgba(185, 199, 252);
+}
+
+.grid-button.advisor {
+    background-color: rgba(216, 252, 213);
+}
+
+.grid-button.activities {
+    background-color: rgba(255, 197, 197);
+}
+
+.grid-button.more {
+    background-color: rgba(217, 241, 252);
+}
+
+
+.text-overlay {
+    color: #fff; /* Text color (white in this example) */
+    background-color: #bbbbbb; /* Background color */
+    padding: 0px 0px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 20px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow */
+}
+
+/*ตาราง education*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/*footer*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-text{
+    margin-top: 10px;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.yellow-text {
+    color: yellow;
+}
+
+.left-align {
+    text-align: left;
+}
